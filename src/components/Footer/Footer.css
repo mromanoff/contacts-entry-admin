@@ -1,0 +1,9 @@
+/** @define Footer */
+
+@import "styles/theme.css";
+
+.Footer {
+    color: var(--color-white);
+    background-color:  var(--color-deep-purple);
+    padding: 20px;
+}

@@ -1,0 +1,8 @@
+/** @define List */
+
+@import "styles/theme.css";
+
+.ContactList {
+    background-color: var(--color-gray);
+    padding: 10px 20px;
+}

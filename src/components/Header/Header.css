@@ -1,0 +1,7 @@
+@import "styles/theme.css";
+
+/** @define Header */
+.Header {
+    background-color:  var(--color-dark-orange);
+    padding: 0.5rem 1rem;
+}
