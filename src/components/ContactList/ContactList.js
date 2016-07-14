@@ -1,8 +1,9 @@
+import './ContactList.css';
+
 import React, {PropTypes, Component} from 'react';
 import {observer} from 'mobx-react';
 import Contact from '../Contact';
 
-//import './ContactList.css';
 
 @observer(['store'])
 class ContactList extends Component {

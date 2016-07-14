@@ -1,20 +1,26 @@
-mobx-react-boilerplate
-=====================
+React MongoLab contacts entry admin.
+---
 
-A minimal application that combines [MobX](https://mobxjs.github.io/mobx) with [React](https://facebook.github.io/react).
-Supports ES6 and JSX compilation through babel.
+based on: https://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/
 
-* For a more sophisticated project to start with, see the full TodoMVC implementation: [mobx-react-todomvc](https://github.com/mobxjs/mobx-react-todomvc).
+ReactJS
+SuitCSS
+PostCSS
+CSSNext
+BemLinter
 
-### Run the example
+
+Usage
+---
 
 ```
 npm install
-npm start
-open http://localhost:3000
 ```
 
+Start the development server with this command:
 
-### Credits
+```
+npm start
+```
 
-* [Mendix](http://github.com/mendix) for providing the opportunity to battle test this approach (we're hiring!).
+open browser: http://localhost:8080
