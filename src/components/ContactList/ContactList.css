@@ -1,8 +1,7 @@
 /** @define ContactList */
-
-@import "styles/theme.css";
+@import "../../styles/theme.css";
 
 .ContactList {
-    background-color: var(--color-gray);
-    padding: 10px 20px;
+  padding: var(--space-small-px) 0;
+  margin-bottom: calc(var(--space-large-px) * 3);
 }

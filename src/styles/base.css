@@ -41,6 +41,11 @@ html {
   letter-spacing: 0.05em;
 }
 
+h1 {
+  font-family: var(--font-family-header);
+  font-weight: 100;
+}
+
 
 /*
  * Remove text-shadow in selection highlight:

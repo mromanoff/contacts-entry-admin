@@ -1,5 +1,4 @@
-import 'suitcss-base';
-import '../../styles/base.css';
+import './App.css';
 
 import React, {Component} from 'react';
 import {observer, Provider} from 'mobx-react';
@@ -17,8 +16,8 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Header />
-          <main>
-            <h1>Contacts Entries</h1>
+          <main className="Main">
+            <h1 className="Main-title">Contacts Entries</h1>
             <ContactList/>
           </main>
           <Footer />

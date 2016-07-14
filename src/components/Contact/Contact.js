@@ -8,10 +8,10 @@ class Contact extends Component {
     const {contact: {firstName, lastName, email}} = this.props;
 
     return (
-      <li className="Contact">
+      <li className="Contact u-flex u-flexAlignItemsCenter">
         <div><strong>Name:</strong> {firstName} {lastName}</div>
         <div><strong>email:</strong> {email}</div>
-        <div>
+        <div className="Button-group u-flexExpandLeft">
           <Button label="Edit"
                   className="Button Button--default Button--small"/>
           <Button label="Delete"

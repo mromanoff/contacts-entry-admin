@@ -1,4 +1,18 @@
+@import "../../styles/theme.css";
+
 /** @define App */
 
 .App {}
 
+
+/** @define Main */
+.Main {
+  margin: 0 auto;
+  min-width: 1200px;
+  max-width: 1400px;
+  padding: 0 2rem 0;
+}
+
+.Main-title {
+  margin: var(--space-large-px) 0;
+}

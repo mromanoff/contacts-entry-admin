@@ -17,13 +17,14 @@ class Header extends Component {
     let {store: {contactsCount}} = this.props;
 
     return (
-      <header className="Header" role="banner">
+      <header className="Header u-flex u-flexRow u-flexAlignItemsCenter" role="banner">
         <h1 className="Header-logo">
           <a href="/">
             <img className="Header-logoImage" src={LogoImage} alt="romanoff.io" />
           </a>
         </h1>
-        {contactsCount}
+        <div className="u-flexGrow1"></div>
+        <div className="Header-item">Total: {contactsCount}</div>
       </header>
     );
   }

@@ -1,9 +1,65 @@
 /** @define Footer */
-
 @import "../../styles/theme.css";
 
 .Footer {
-    color: var(--color-brand-primary3);
-    background-color:  var(--color-brand-primary2);
-    padding: 20px;
+  color: var(--color-brand-primary3);
+  background-color: var(--color-brand-primary2);
+  padding: var(--space-large-px);
+  min-height: 270px;
+  text-align: center;
+}
+
+.Footer h4 {
+  letter-spacing: 2px;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+}
+
+.Footer hr {
+  border-color: var(--color-brand-primary3);
+}
+
+.Footer li {
+  display: inline-block;
+  margin: 0 var(--space-small-px);
+}
+
+.Footer-socialIcons {
+  margin-bottom: var(--space-large-px);
+}
+
+.Footer-copyright {
+  font-size: smaller;
+  margin: 0;
+}
+
+.Footer-socialIcons a {
+  display: block;
+  width: 3.6rem;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  border-radius: 3.6rem;
+  border: 2px solid var(--color-brand-primary3);
+  color: var(--color-brand-primary3);
+  font-size: larger;
+  text-decoration: none;
+}
+
+.Footer-socialIcons a:hover {
+  background-color: rgba(215, 48, 48, .5);
+  color: var(--color-brand-primary3);
+}
+
+.Footer-links {
+  letter-spacing: 1px;
+  margin: var(--space-medium-px) 0;
+
+}
+
+.Footer-links a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: smaller;
+  color: var(--color-brand-primary3);
 }
