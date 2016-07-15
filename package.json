@@ -4,10 +4,12 @@
   "description": "MobX + React project with JSX, ES6 compilation and hot code reloading",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -35,12 +37,16 @@
     "babel-preset-stage-1": "^6.5.0",
     "colors": "^1.1.2",
     "css-loader": "^0.23.1",
+    "enzyme": "^2.4.1",
     "eslint": "^2.13.1",
     "eslint-plugin-import": "^1.10.3",
     "eslint-plugin-react": "^5.2.2",
     "eslint-watch": "^2.1.13",
+    "expect": "^1.20.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "jsdom": "^9.4.1",
+    "mocha": "^2.5.3",
     "npm-run-all": "^2.3.0",
     "open": "0.0.5",
     "postcss": "^5.1.0",
