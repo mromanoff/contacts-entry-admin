@@ -1,5 +1,7 @@
 import {observable, computed, action, autorun, useStrict} from 'mobx';
+import {random} from 'lodash';
 import 'whatwg-fetch';
+
 useStrict(false);
 
 const API = {
@@ -40,7 +42,6 @@ class ContactsStore {
 
   @action
   addContact() {
-
     const init = {
       method: 'POST',
       mode: 'cors',
@@ -70,6 +71,30 @@ class ContactsStore {
   @action
   editContact(contact) {
     console.debug('edit contact', contact);
+    const init = {
+      method: 'PUT',
+      mode: 'cors',
+      cache: 'no-cache',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        firstName: 'TEST' + random(100),  //TODO: update
+        lastName: 'USER' + random(100),
+        email: 'test.email'+ random(100) +' @test.com'
+      })
+    };
+
+    fetch(find(contact._id), init)
+      .then(response => response.json())
+      .then((contact) => {
+        console.warn(`Successfully updated contact! ${contact._id.$oid}`);
+        this.loadContacts();
+      })
+      .catch(function (err) {
+        console.error('There has been a problem with your fetch operation: ', err.message)
+      });
   }
 
   @action
