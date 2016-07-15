@@ -53,6 +53,7 @@
     "mobx-react-devtools": "^4.2.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "suitcss": "^2.0.0"
+    "suitcss": "^2.0.0",
+    "uuid": "^2.0.2"
   }
 }

@@ -1,24 +1,29 @@
-@import "styles/theme.css";
+@import "suitcss-components-button";
+@import "../../styles/theme.css";
+
+
 
 /** @define Button */
 
 :root {
-    --Button-border-color: currentcolor;
-    --Button-border-width: 1px;
-    --Button-color: inherit;
-    --Button-disabled-opacity: 0.6;
-    --Button-font: inherit;
-    --Button-padding: 0.4em 0.75em;
-    --Button-border-radius: 2px;
+  --Button-border-color: currentcolor;
+  --Button-border-width: 0;
+  --Button-color: inherit;
+  --Button-disabled-opacity: 0.6;
+  --Button-font: inherit;
+  --Button-padding: 0.4em 0.75em;
+  --Button-border-radius: 0;
 }
 
 .Button {
-    background: var(--color-deep-blue);
-    border-radius: var(--Button-border-radius);
+  background: var(--color-deep-blue);
+  border-radius: var(--Button-border-radius);
+  text-transform: uppercase;
+  letter-spacing: .1rem;
 }
 
-.Button + .Button {
-    margin-left: .3em;
+.Button:focus {
+  outline: 0;
 }
 
 /**
@@ -26,70 +31,54 @@
  */
 
 .Button--default {
-    background-color: var(--color-medium-gray);
-    color: var(--Button-color);
-    border-color: var(--color-dark-gray);
+  background-color: var(--color-medium-gray);
+  color: var(--Button-color);
 }
 
 .Button--default:hover,
-.Button--default:focus,
-.Button--default:active,
-.Button--default.is-pressed {
-    background-color: var(--color-gray);
-    border-color: var(--color-medium-gray);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
 .Button--default:focus {
-    border-color: #069;
-    outline: 0;
+  background-color: var(--color-gray);
+  border-color: var(--color-gray);
 }
 
 .Button--default:active,
 .Button--default.is-pressed {
-    background-color: #ccc;
-    box-shadow: inset 0 1px 2px rgba(0,0,0, 0.2);
+  background-color: #ccc;
+}
+
+.Button--primary {
+  background: var(--color-brand-primary5);
+  color: var(--Button-color);
 }
 
 .Button--danger {
-    background-color: var(--color-light-red);
-    color: var(--Button-color);
-    border-color: var(--color-dark-red);
+  background-color: var(--color-light-red);
+  color: var(--Button-color);
 }
 
 .Button--danger:hover,
-.Button--danger:focus,
-.Button--danger:active,
-.Button--danger.is-pressed {
-    background-color: var(--color-deep-red);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
 .Button--danger:focus {
-    border-color: #069;
-    outline: 0;
+  background-color: var(--color-deep-red);
 }
 
 .Button--danger:active,
 .Button--danger.is-pressed {
-    background-color: var(--color-dark-red);
-    box-shadow: inset 0 1px 2px rgba(0,0,0, 0.2);
+  background-color: var(--color-dark-red);
 }
-
 
 /**
  * Modifier: large buttons
  */
 
 .Button--large {
-    font-size: 1.5em;
-    padding: 0.75em 1.5em;
+  font-size: 1.5em;
+  padding: 0.75em 1.5em;
 }
 
 /**
  * Modifier: small buttons
  */
 .Button--small {
-    font-size: 0.75em;
-    padding: 0.5em 1em;
+  font-size: 0.75em;
+  padding: 0.5em 1em;
 }

@@ -4,15 +4,22 @@
 
 .Contact {
   padding: var(--space-small-px) 0;
-  /*display: flex;*/
-  /*align-items: center;*/
-  /*flex: 1 0 auto;*/
-  /*justify-content: space-between;*/
-
   width: 100%;
   border-bottom: 1px solid var(--color-gray);
 }
 
+.Contact-item {
+  margin-left: 2rem;
+}
+
+.Contact-item:first-child {
+  margin-left: 0;
+}
+
 .Contact:last-child {
   border-bottom: none;
+}
+
+.Contact-wrapButton {
+
 }
