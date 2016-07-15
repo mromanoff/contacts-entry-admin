@@ -1,10 +1,12 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var webpack = require('webpack');
-var DefinePlugin = require('webpack').DefinePlugin;
-var postcssImport = require('postcss-import');
-var cssNext = require('postcss-cssnext');
-var bemLinter = require('postcss-bem-linter');
+'use strict';
+
+let path = require('path');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let webpack = require('webpack');
+let DefinePlugin = require('webpack').DefinePlugin;
+let postcssImport = require('postcss-import');
+let cssNext = require('postcss-cssnext');
+let bemLinter = require('postcss-bem-linter');
 
 module.exports = {
   debug: true,

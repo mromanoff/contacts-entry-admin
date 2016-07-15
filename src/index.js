@@ -1,3 +1,6 @@
+/*eslint-disable no-console */
+console.log('hi');
+
 import './styles/main.css';
 
 

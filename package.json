@@ -1,41 +1,48 @@
 {
-  "name": "mobx-react-boilerplate",
-  "version": "1.0.0",
-  "description": "Boilerplate for MobX + React project with JSX, ES6 compilation and hot code reloading",
+  "name": "contacts-entry-reader",
+  "version": "1.0.1",
+  "description": "MobX + React project with JSX, ES6 compilation and hot code reloading",
   "scripts": {
-    "start": "node server.js",
-    "lint": "eslint src"
+    "prestart": "babel-node tools/startMessage.js",
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "babel-node tools/srcServer.js",
+    "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "lint:watch": "npm run lint -- --watch"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mobxjs/mobx-react-boilerplate.git"
+    "url": "https://github.com/mromanoff/contacts-entry-admin.git"
   },
   "keywords": [
     "react",
     "reactjs",
-    "boilerplate",
-    "mobx",
-    "starter-kit"
+    "mobx"
   ],
-  "author": "Michel Weststrate <mweststrate@gmail.com> (http://github.com/mweststrate)",
+  "author": "Michel Romanoff <zelcie@gmail.com> (http://github.com/mromanoff)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mobxjs/mobx/issues"
+    "url": "https://github.com/mromanoff/contacts-entry-admin/issues"
   },
-  "homepage": "http://mobxjs.github.com/mobx",
   "devDependencies": {
+    "babel-cli": "^6.10.1",
     "babel-core": "^6.9.1",
-    "babel-eslint": "^6.1.0",
+    "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-1": "^6.5.0",
+    "colors": "^1.1.2",
     "css-loader": "^0.23.1",
     "eslint": "^2.13.1",
-    "eslint-plugin-react": "^5.1.1",
+    "eslint-plugin-import": "^1.10.3",
+    "eslint-plugin-react": "^5.2.2",
+    "eslint-watch": "^2.1.13",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "npm-run-all": "^2.3.0",
+    "open": "0.0.5",
     "postcss": "^5.1.0",
     "postcss-bem-linter": "^2.5.1",
     "postcss-cssnext": "^2.7.0",
@@ -45,7 +52,9 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.12.1"
   },
   "dependencies": {
     "lodash": "^4.13.1",

@@ -1,9 +1,8 @@
-React MongoLab contacts entry admin.
+React Mobx MongoLab contacts entry admin.
 ---
 
-based on: https://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/
-
 ReactJS
+Mobx
 SuitCSS
 PostCSS
 CSSNext

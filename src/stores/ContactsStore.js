@@ -59,8 +59,8 @@ class ContactsStore {
 
     fetch(findAll(), init)
       .then(response => response.json())
-      .then((contact) => {
-        console.warn(`Successfully added contact!`);
+      .then(() => {
+        console.info(`Successfully added contact!`);
         this.loadContacts();
       })
       .catch(function (err) {
@@ -70,7 +70,7 @@ class ContactsStore {
 
   @action
   editContact(contact) {
-    console.debug('edit contact', contact);
+    const randomNumber = random(100);
     const init = {
       method: 'PUT',
       mode: 'cors',
@@ -80,16 +80,16 @@ class ContactsStore {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        firstName: 'TEST' + random(100),  //TODO: update
-        lastName: 'USER' + random(100),
-        email: 'test.email'+ random(100) +' @test.com'
+        firstName: `TEST ${randomNumber}`,
+        lastName: `USER ${randomNumber}`,
+        email: `test.email${randomNumber}@test.com`
       })
     };
 
     fetch(find(contact._id), init)
       .then(response => response.json())
       .then((contact) => {
-        console.warn(`Successfully updated contact! ${contact._id.$oid}`);
+        console.info(`Successfully updated contact! ${contact._id.$oid}`);
         this.loadContacts();
       })
       .catch(function (err) {
@@ -108,7 +108,7 @@ class ContactsStore {
     fetch(find(contact._id), init)
       .then(response => response.json())
       .then((contact) => {
-        console.warn(`Successfully deleted contact! ${contact._id.$oid}`);
+        console.info(`Successfully deleted contact! ${contact._id.$oid}`);
         this.loadContacts();
       })
       .catch(function (err) {

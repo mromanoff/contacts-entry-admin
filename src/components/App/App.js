@@ -1,7 +1,7 @@
 import './App.css';
 
 import React, {Component} from 'react';
-import {observer, Provider} from 'mobx-react';
+import {Provider} from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -25,7 +25,7 @@ class App extends Component {
         </div>
       </Provider>
     );
-  };
+  }
 }
 
 export default App;

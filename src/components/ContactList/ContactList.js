@@ -1,6 +1,6 @@
 import './ContactList.css';
 
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import Contact from '../Contact';
 
@@ -14,7 +14,7 @@ class ContactList extends Component {
     let contactNodes = contacts.map(function (contact) {
       return (
         <Contact key={contact._id.$oid} contact={contact}/>
-      )
+      );
     });
 
     return (
