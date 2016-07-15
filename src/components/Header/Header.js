@@ -3,16 +3,17 @@ import LogoImage from './header-logo.png';
 
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
-
-
-// const Header = observer(({store}) =>
-//   <header className="Header">
-//     <h1>Romanoff.io {store.contactsCount}</h1>
-//   </header>
-// );
+import Button from '../Button';
 
 @observer(['store'])
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    const {store} = props;
+    this.addContact = store.addContact.bind(store);
+  }
+
+
   render() {
     let {store: {contactsCount}} = this.props;
 
@@ -25,6 +26,9 @@ class Header extends Component {
         </h1>
         <div className="u-flexGrow1"></div>
         <div className="Header-item">Total: {contactsCount}</div>
+        <div className="Header-item">
+          <Button label="Add Test" className="Button Button--primary" handleAction={this.addContact}/>
+        </div>
       </header>
     );
   }

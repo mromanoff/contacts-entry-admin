@@ -2,7 +2,6 @@ import './Button.css';
 
 import React, {PropTypes} from 'react';
 
-
 const Button = ({className, handleAction, label}) => {
   className = className ? className : 'Button';
 

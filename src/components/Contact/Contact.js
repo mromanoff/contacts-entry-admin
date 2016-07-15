@@ -10,8 +10,6 @@ class Contact extends Component {
   constructor(props) {
     super(props);
 
-    console.info(props);
-
     const {store} = props;
     this.addContact = store.addContact.bind(store);
     this.editContact = store.editContact.bind(store, props.contact);
@@ -26,9 +24,8 @@ class Contact extends Component {
         <div className="Contact-item"><strong>Name:</strong> {firstName} {lastName}</div>
         <div className="Contact-item"><strong>email:</strong> {email}</div>
         <div className="Contact-wrapButton u-flexExpandLeft">
-          <Button label="Edit" className="Button Button--default" handleAction={this.editContact}/>
-          <Button label="Add" className="Button Button--primary" handleAction={this.addContact}/>
-          <Button label="Delete" className="Button Button--danger" handleAction={this.deleteContact}/>
+          <Button label="Edit" className="Button Button--default Button--small" handleAction={this.editContact}/>
+          <Button label="Delete" className="Button Button--danger Button--small" handleAction={this.deleteContact}/>
         </div>
       </li>
     );
