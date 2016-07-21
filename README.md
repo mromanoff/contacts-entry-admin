@@ -1,4 +1,4 @@
-React Mobx MongoLab contacts entry admin.
+React Mobx MongoLab contacts entry admin. [![npm](https://img.shields.io/badge/npm-1.0.1-ff69b4.svg?style=flat-square)](https://github.com/mromanoff/contacts-entry-admin)
 ---
 
 ReactJS
